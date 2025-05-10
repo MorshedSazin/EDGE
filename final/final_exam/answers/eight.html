@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of 100 Books</title>
+    <script>
+        function searchBook() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const bookList = document.querySelectorAll('ol li');
+            let found = false;
+
+            for (let i = 0; i < bookList.length; i++) {
+                const bookTitle = bookList[i].textContent.toLowerCase();
+                if (bookTitle.includes(searchQuery)) {
+                    alert('Book found: ' + bookList[i].textContent);
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                alert('Book not found');
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="one.html">Problem 1</a> |
+        <a href="two.html">Problem 2</a> |
+        <a href="three.html">Problem 3</a> |
+        <a href="four.html">Problem 4</a> |
+        <a href="five.html">Problem 5</a> |
+        <a href="six.html">Problem 6</a> |
+        <a href="seven.html">Problem 7</a> |
+        <a href="eight.html">Problem 8</a> |
+        <a href="nine.html">Problem 9</a>
+    </nav> 
+    <br><br>
+    <h1>Problem 8</h1><br>
+    <input type="text" id="searchInput" placeholder="Enter book title">
+    <button onclick="searchBook()">Search</button>
+    <br><br>
+    <h1>List of 100 Books</h1>
+    <ol>
+        <li>Les Misérables by Victor Hugo</li>
+        <li>The Grapes of Wrath by John Steinbeck</li>
+        <li>Catch-22 by Joseph Heller</li>
+        <li>The Hobbit by J.R.R. Tolkien</li>
+        <li>Fahrenheit 451 by Ray Bradbury</li>
+        <li>Middlemarch by George Eliot</li>
+        <li>Madame Bovary by Gustave Flaubert</li>
+        <li>Slaughterhouse-Five by Kurt Vonnegut</li>
+        <li>Emma by Jane Austen</li>
+        <li>Frankenstein by Mary Shelley</li>
+    </ol>
+</body>
+</html>
